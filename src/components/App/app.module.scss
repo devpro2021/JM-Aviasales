@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,600);
+body {
+  background-color: $main-bg;
+}
+.container {
+  width: 754px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 232px auto;
+  grid-template-rows: 140px auto;
+  grid-gap: 20px;
+  grid-template-areas:
+    'header header'
+    'transferFilter ticketsList';
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $font-color;
+}

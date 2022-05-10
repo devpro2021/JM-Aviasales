@@ -1,0 +1,42 @@
+.ticketFilter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #dfe5ec;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &__item {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:active {
+      background-color: #2196f3;
+      color: #ffffff;
+    }
+    &:first-child {
+      border-right: 1px solid #dfe5ec;
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child {
+      border-left: 1px solid #dfe5ec;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+.ticketFilter__item--selected {
+  background-color: #2196f3;
+  color: #ffffff;
+}
