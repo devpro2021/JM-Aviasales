@@ -4,18 +4,34 @@ body {
   background-color: $main-bg;
 }
 .container {
-  width: 754px;
+  max-width: 754px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 232px auto;
-  grid-template-rows: 140px auto;
-  grid-gap: 20px;
+  grid-template-rows: 140px 20px auto;
+  grid-column-gap: 20px;
   grid-template-areas:
     'header header'
+    'progress progress'
     'transferFilter ticketsList';
   font-family: Open Sans;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: $font-color;
+}
+.ant-progress {
+  grid-area: progress;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'header'
+      'progress'
+      'transferFilter'
+      'ticketsList';
+  }
 }

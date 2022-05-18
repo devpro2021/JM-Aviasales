@@ -1,0 +1,41 @@
+.tabFilter {
+  display: flex;
+  background-color: #ffffff;
+  color: #4a4a4a;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  &__item {
+    width: 33.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: transparent;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    line-height: 20px;
+    border: 1px solid #dfe5ec;
+    box-sizing: border-box;
+    &_active {
+      background: #2196f3;
+      color: #ffffff;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 470px) {
+  .tabFilter {
+    &__item {
+      font-size: 10px;
+      line-height: 15px;
+      padding: 0 2px;
+      letter-spacing: 0;
+    }
+  }
+} ;
